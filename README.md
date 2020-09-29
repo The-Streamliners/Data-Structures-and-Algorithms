@@ -3,24 +3,24 @@
 ## Introduction
 
 Hacktoberfest is a month-long celebration to encourage developers to use and contribute to open source projects.
-Continuing with the tradition, this year hacktoberfest is happening from 1st to 31st October, 2020.
+Continuing with the tradition, this year Hacktoberfest is happening from 1st to 31st October, 2020.
 
 ## Details
 
-By contributing to open source, in terms of 4 pull requests, you get a limited edition hacktoberfest T-shirt and stickers shipped to your address by Digital Ocean.
+By contributing to open source, in terms of 4 pull requests, you get a limited edition Hacktoberfest T-shirt and stickers shipped to your address by Digital Ocean.
 
 ## How can I participate?
 
-This repository is for you to practice contributing to open source projects and earn a hacktoberfest T-shirt in the process. Write an implementation of your favorite algorithm in the programming language of your choice and submit a pull request to this repository. If you need any ideas, check out the [issues page](https://github.com/iltwats/hacktoberfest/issues)!
+This repository is for you to practice contributing to open source projects and earn a Hacktoberfest T-shirt in the process. Write an implementation of your favorite algorithm in the programming language of your choice and submit a pull request to this repository. If you need any ideas, check out the [issues page](https://github.com/iltwats/hacktoberfest/issues)!
 
 Issues page is just for your reference. You are encouraged to submit implementation of *your* choice of algorithm in any programming language.
 
-Simultaneously, register yourself on the [Hacktoberfest Website](https://hacktoberfest.digitalocean.com/). Click on the 'Start Hacking' button and fill in the required details. When you complete 4 pull requests, get ready for an awesome hacktoberfest T-shirt for you to show-off!
+Simultaneously, register yourself on the [Hacktoberfest Website](https://hacktoberfest.digitalocean.com/). Click on the 'Start Hacking' button and fill in the required details. When you complete 4 pull requests, get ready for an awesome Hacktoberfest T-shirt for you to show-off!
 
 
 ## Steps to follow
 
-1. Create an empty directory in your local system and cd into it
+1. Create an empty directory in your local system and `cd` into it
 ```bash
 mkdir open_source
 cd open_source
@@ -38,16 +38,16 @@ This command initializes your directory for [git version control](https://www.di
 ```bash
 git clone https://github.com/<your-github-username>/hacktoberfest.git
 ```
-5. cd into the project repository and adding your implementation of your favorite algorithm in the programming language of your choice.
+5. `cd` into the project repository and adding your implementation of your favorite algorithm in the programming language of your choice.
 ```bash
 cd hacktoberfest
 cd Sorting
-vim/subl/gedit/nano my-awesome-algorithm.c/.cpp/.java/.py
+vim/subl/gedit/nano my-awesome-algorithm{.c/.cpp/.java/.py}
 ```
 6. Commit your changes
 ```bash
-git add my-awesome-algorithm.c/.cpp/.java/.py
-git commit -m "Add an implementation of my awesome algorithm in Python"
+git add my-awesome-algorithm{.c/.cpp/.java/.py}
+git commit -m "Add an implementation of my awesome algorithm in {C,C++,Java,Python}"
 ```
 Here are some guidelines on how to write a [great commit message](https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53).
 
