@@ -66,9 +66,8 @@ Create the pull request
 ```
 ## Github Desktop Tutorial
 <u>**Github Desktop**</u> can be also used if the above method seems complicated. It can be downloaded from [here](https://desktop.github.com/).
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/77W2JSL7-r8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+
+WATCH THE [**TUTORIAL**](https://www.youtube.com/watch?v=77W2JSL7-r8) ON HOW TO USE IT!
 
 ## Github Tutorials
 Although this should get you going, here are some awesome tutorials to help you create your first PR!
