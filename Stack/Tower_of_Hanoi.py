@@ -1,3 +1,6 @@
+#Contribiuted by Shyam Yadav [github/YA12SHYAM]
+#implementing recusion solution of Tower of Hanoi in python
+
 def solve_hanoi(n,from_rod,to_rod,use_rod):
   if(n==1):
     print("Move disk 1 from rod {} to_rod {}".format(from_rod,to_rod))
