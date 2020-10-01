@@ -8,5 +8,9 @@ def uppercase(str_data):
             result+=char
     return result
 
+
 print(uppercase("Hello World"))
 print(uppercase("heLLo wOrLD"))
+
+uppercase("Hello World")
+
