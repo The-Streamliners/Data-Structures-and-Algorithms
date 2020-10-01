@@ -1,55 +1,34 @@
-// C++ program for insertion sort
-#include <bits/stdc++.h>
-using namespace std;
-/* Function to sort an array using insertion sort*/
-void insertionSort(int arr[], int n)
+#include<iostream.h>
+#include<conio.h>
+void main()
 {
-    int i, key, j;
-    for (i = 1; i < n; i++)
-    {
-        key = arr[i];
-        j = i - 1;
-        /* Move elements of arr[0..i-1], that are  greater than key, to one position ahead of their current position */
-
-        while (j >= 0 && arr[j] > key)
-
-        {
-
-            arr[j + 1] = arr[j];
-
-            j = j - 1;
-        }
-
-        arr[j + 1] = key;
-    }
-}
-
-// A utility function to print an array of size n
-
-void printArray(int arr[], int n)
-{
-
-    int i;
-
-    for (i = 0; i < n; i++)
-
-        cout << arr[i] << " ";
-
-    cout << endl;
-}
-
-/* Driver code */
-
-int main()
-{
-
-    int arr[] = {12, 11, 13, 5, 6};
-
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    insertionSort(arr, n);
-
-    printArray(arr, n);
-
-    return 0;
+	clrscr();
+	int n, i, arr[50], j, temp;
+	cout<<"Enter total number of elements :";
+	cin>>n;
+	cout<<"Enter "<<n<<" numbers :";
+	for(i=0; i<n; i++)
+	{
+		cin>>arr[i];
+	}
+	cout<<"Sorting array using bubble sort technique...\n";
+	for(i=0; i<(n-1); i++)
+	{
+		for(j=0; j<(n-i-1); j++)
+		{
+			if(arr[j]>arr[j+1])
+			{
+				temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+		}
+	}
+	cout<<"Elements sorted successfully..!!\n";
+	cout<<"Sorted list in ascending order :\n";
+	for(i=0; i<n; i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+	getch();
 }
