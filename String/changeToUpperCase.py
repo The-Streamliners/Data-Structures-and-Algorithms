@@ -1,5 +1,5 @@
 def uppercase(str_data):
-    '''Python program to convert the string to uppercase without inbuild functions'''
+    '''Python program to convert the string to uppercase without inbuilt functions'''
     result = ''
     for char in str_data:
         if ord(char) >= 97 and ord(char)<=122:
