@@ -1,4 +1,4 @@
-// C++ program to change all char from lower to uppper
+// C++ program to change all char from upper to lower
 #include <iostream> 
 using namespace std; 
 
