@@ -12,5 +12,5 @@ def uppercase(str_data):
 print(uppercase("Hello World"))
 print(uppercase("heLLo wOrLD"))
 
-uppercase("Hello World")
+
 
