@@ -5,10 +5,10 @@ def printPascal(n):
               
             # The first value in a  
             # line is always 1  
-            print(C, end = " ");  
-            C = int(C * (line - i) / i);  
-        print("");  
+            print(C, end = " ")  
+            C = int(C * (line - i) / i)
+        print("")
   
 # Driver code  
-n = 5;  
-printPascal(n); 
+n = 5  
+printPascal(n) 
