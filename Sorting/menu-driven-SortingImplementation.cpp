@@ -1,9 +1,12 @@
+//GITHUB PROFILE ID : https://github.com/AviSharma1305
+//GITHUB USER ID : AviSharma1305
 // CODE FOR MENU DRIVEN SORTING METHODS
 // INCLUDES SELECTION, BUBBLE, INSERTION SORTING METHODS RESP.
 
 #include <bits/stdc++.h>
 using namespace std;
 
+//FUNCTION TO SORT THE ELEMENT USING SELECTION SORT ALGO
 void selection_sort(vector<int> &v, int n){
     for(int i = 0; i < n-1; i++){
         int min_indx = i;
@@ -14,6 +17,7 @@ void selection_sort(vector<int> &v, int n){
     }
 }
 
+//FUNCTION TO SORT THE ELEMENT USING BUBBLE SORT ALGO
 void bubble_sort(vector<int> &v, int n){
     for(int i = 0; i < n-1; i++){
         bool flag = false;
@@ -27,6 +31,7 @@ void bubble_sort(vector<int> &v, int n){
     }
 }
 
+//FUNCTION TO SORT THE ELEMENT USING INSERTION SORT ALGO
 void insertion_sort(vector<int> &v, int n){
     for(int i = 1; i < n; i++){
         int key = v[i];
@@ -39,6 +44,7 @@ void insertion_sort(vector<int> &v, int n){
     }
 }
 
+//FUNCTION TO DISPLAY THE SORTED VECTOR
 void display_Array(vector<int> &v ,int n)
 {
      cout << "After Sorting: ";
@@ -48,11 +54,12 @@ void display_Array(vector<int> &v ,int n)
         v.clear();
 }
 
+//DRIVER CODE
 int main(){
     int n, ch, x;
     vector<int> v(n);
     do{
-        cout << "\n\tMENU\n1. Selection Sort\n2. Bubble Sort\n3. Insertion Sort\n4. Exit\nEnter your choice: ";
+        cout << "\n\tMENU\n1. Selection Sort\n2. Bubble Sort\n3. Insertion Sort\n4. Exit\nEnter your choice: "; //MENU FOR SORTING ALGOS
         cin >> ch;
         if(ch != 4){
             cout << "Enter number of elements: ";
@@ -63,22 +70,22 @@ int main(){
                 v.push_back(x);
             }
         }
-        if(ch == 1)
+        if(ch == 1)   //SELECTION SORT
             {
                 selection_sort(v, n);
                 display_Array(v,n);
             }
-        else if(ch == 2)
+        else if(ch == 2)  //BUBBLE SORT
             {
                 bubble_sort(v, n);
                 display_Array(v,n);
             }
-        else if(ch == 3)
+        else if(ch == 3)  //INSERTION SORT
         {
             insertion_sort(v, n);
             display_Array(v,n);
         }
-        else if(ch == 4)
+        else if(ch == 4)  //EXIT
             break;
         else
             {
