@@ -13,11 +13,11 @@ By contributing to open source, in terms of 4 pull requests, you get a limited e
 
 This repository is for you to practice contributing to open source projects and earn a Hacktoberfest T-shirt in the process. Write an implementation of your favorite algorithm from the issues section in the programming language of your choice and submit a pull request to this repository. For ideas, check out the [issues page](https://github.com/iltwats/hacktoberfest/issues)!
 
-Issues page is for your reference. You are encouraged to submit implementation of *your* choice of algorithm in any programming language if you think it is also **important** to be there..
+Issues page is for your reference. You are to submit implementation of *your* choice of algorithm in any programming language if you think it is also **important** to be there..
 
 Simultaneously, register yourself on the [Hacktoberfest Website](https://hacktoberfest.digitalocean.com/). Click on the 'Start Hacking' button and fill in the required details. When you complete 4 pull requests, get ready for an awesome Hacktoberfest T-shirt for you to show-off!
 
-### Spamming with illogical PRs about upadting changing readme will not be considered. Please refer to *Contributing.md* for more info.
+**Spamming with illogical PRs about upadting changing readme will not be considered. Please refer to *Contributing.md* for more info.**
 
 
 ## Steps to follow
