@@ -1,6 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+int findtax(float arr[][2], int n, int salary)
+{ 
+int tax=0;
+for(int i=0;i<n;i++)
+{
+  if(i==0)
+  {
+  	if(salary>=arr[i][1]){
+  		salary=salary-arr[i][0];
+  		tax+=(arr[i][0]*arr[i][1]/100);
+	  }
+	  else{
+	  	tax+=(salary*arr[i][1]/100);
+	  	salary=0;
+	  }
+  }
+  else{
+  	if(salary>(arr[i][0]-arr[i-1][0]))
+  	  {
+  		salary=salary-(arr[i][0]-arr[i-1][0]);
+  	 	 tax+=((arr[i][0]-arr[i-1][0])*arr[i][1]/100);	
+	  }
+  	else{
+  		tax+=(salary*arr[i][1]/100);
+	  	salary=0;
+	  }
+  	
+  }
+	
+}
+  
+return tax;		
+}
 int findincome(float arr[][2], int n, float paid)
 {
     float income = 0;
@@ -13,7 +46,7 @@ int findincome(float arr[][2], int n, float paid)
 		else{
 		 temp = ((arr[i][0]-arr[i-1][0]) * arr[i][1] / 100.00);	
 		}
-       
+
         if(paid > temp)
         {
         	if(i>0){
@@ -22,7 +55,7 @@ int findincome(float arr[][2], int n, float paid)
 			else{
 				income = income + arr[i][0];
 			}
-            
+
             paid = paid - temp;
 
         }
@@ -46,26 +79,20 @@ int main()
     {
         cin >> arr[i][0] >> arr[i][1];
     }
+      bool check;
+    cout<<"If you want to check your salary from tax Press 1 or if you want to check tax from salary Press 0 "<<endl;
+    cin>>check;
+    if(check==1){
     int paid;
     cout << "Enter total tax paid(in rupees)" << endl;
-    cin >> paid;
-    cout << "Your Income is ";
-    cout << findincome(arr, n, paid);
+    cin>>paid;
+    cout <<"Your Income is " <<findincome(arr, n, paid);
+	}
+    else{
+    	int salary;
+    	cout<<"Enter your Income"<<endl;
+    	cin>>salary;
+    	cout<<"Total tax is "<<findtax(arr,n,salary);
+	}
     return 0;
 }
-
-/*
-output:
-
-Enter number of slabs
-3
-Enter Income(in rupees) and Income tax rate(in percentage)
-250000 0
-500000 5
-1000000 20
-Enter total tax paid(in rupees)
-44200
-Your Income is 658500
------------------------
-
-*/
