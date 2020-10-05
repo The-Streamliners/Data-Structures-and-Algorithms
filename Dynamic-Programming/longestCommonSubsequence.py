@@ -1,3 +1,11 @@
+# The following solution has time complexity of o(mn) and space complexity of o(m+n) where m is the length of the first input and n is the length of the second input.
+
+# The purpose of the solution is to find the longest common subsequence between 2 strings.
+# Example – 
+# Input = abcd, abdf
+# Output = 3 because abd is the longest subsequence (Continuation does not matter just need to be in the same sequence)
+
+
 def longest_common_subsequence(X , Y): 
     x = len(X) 
     y = len(Y) 
