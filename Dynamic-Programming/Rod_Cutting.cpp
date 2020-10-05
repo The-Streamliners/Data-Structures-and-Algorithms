@@ -102,7 +102,8 @@ so the child starts from length 0 to 1 to 2 ....and so on...in determining paren
 
 
 
-
+#include <bits/stdc++.h>
+using namespace std;
 
 
 
@@ -127,7 +128,7 @@ vector<int> getPath(vector< vector <long long>> &cost, vector<int> &B, int i, in
     return ans;
 }
 
-vector<int> Solution::rodCut(int A, vector<int> &B) {
+vector<int> rodCut(int A, vector<int> &B) {
     
     
     B.insert(B.begin(), 0);
@@ -164,6 +165,21 @@ vector<int> Solution::rodCut(int A, vector<int> &B) {
 
 
 
+
+int main() {
+  
+    int A = 6;
+    vector<int> B = {1, 2, 5};
+    
+    vector<int> ans = rodCut(A, B);
+    
+    cout << "Sequential order of selecting the marks on x axis (to cut the rod) " <<endl;
+   
+    for(int i = 0 ; i < ans.size() ; i++ ){
+        cout << ans[i] << " ";   
+    }
+    return 0;   
+}
 
 
 
