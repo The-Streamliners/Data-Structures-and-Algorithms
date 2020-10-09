@@ -1,3 +1,5 @@
+// Programme to round off the number to multiple of 10
+
 #include <stdio.h>
 
 int main ()
