@@ -1,0 +1,68 @@
+//question link : https://codeforces.com/contest/1234/problem/D 
+// 1600 rated question which is nice for intermediate lvl  competetive programmer
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+#define ll long long
+#define fast ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define test int t; cin>>t; while(t--)
+#define pb push_back
+#define mp(a,b) make_pair(a,b)
+#define f0(i,n) for( ll i = 0; i < ( n ); i ++)
+#define f1(i,n) for(i = 1; i <= ( n ); i ++)
+#define f(i,m,n) for(auto i = ( m ); i <= ( n ); i ++)
+#define nl cout<<"\n"
+
+#define all(a) a.begin(),a.end()
+#define rall(v) v.rbegin(), v.rend()
+
+
+typedef vector<ll> vl;
+
+
+int main()
+{
+    fast
+    string s;
+    cin>>s;
+    ll q; cin>>q;
+    vector<set<ll>>ind(26);
+    ll n =s.length();
+    f0(i,n)
+    {
+        ind[s[i]-'a'].insert(i);
+    }
+
+
+    while(q--)
+    {
+        ll a;
+        cin>>a;
+        if(a==1)
+        {
+            ll b; char c;
+            cin>>b>>c;
+            --b;
+
+            ind[s[b]-'a'].erase(b);
+            s[b]=c;
+            ind[c-'a'].insert(b);
+        }
+
+        else
+        {
+            ll cnt =0;
+            ll b,c; cin>>b>>c;
+            --b; --c;
+            f0(i,26)
+            {
+                auto ind2 = ind[i].lower_bound(b);
+                if(ind2!= ind[i].end() && *ind2<=c && b<=*ind2 && c>=*(ind[i].begin()))cnt++;
+            }
+            cout<<cnt;nl;
+        }
+    }
+}
+
