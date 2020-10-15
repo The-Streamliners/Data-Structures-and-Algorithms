@@ -1,19 +1,26 @@
 
 import socket
-server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-host = socket.gethostbyname(socket.gethostname())
-port = 12345
-x = input("Enter file name : ")
-server_socket.connect((host,port))
-name = server_socket.recv(1024).decode()
-name = name.split('.')[-1]
-name = x+'.'+name
 
-f = open(name,'wb')
-while True :
-    c_msg = server_socket.recv(1024)
-    if c_msg == 'EOF'.encode() : 
-        f.close()
-        server_socket.close()
-        break
-    f.write(c_msg)
+
+def client_program():
+    host = socket.gethostname()  # as both code is running on same pc
+    port = 5000  # socket server port number
+
+    client_socket = socket.socket()  # instantiate
+    client_socket.connect((host, port))  # connect to the server
+
+    message = input(" -> ")  # take input
+
+    while message.lower().strip() != 'bye':
+        client_socket.send(message.encode())  # send message
+        data = client_socket.recv(1024).decode()  # receive response
+
+        print('Received from server: ' + data)  # show in terminal
+
+        message = input(" -> ")  # again take input
+
+    client_socket.close()  # close the connection
+
+
+if __name__ == '__main__':
+    client_program()
