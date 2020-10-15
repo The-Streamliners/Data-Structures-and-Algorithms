@@ -1,20 +1,32 @@
+
 import socket
-server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-host = socket.gethostbyname(socket.gethostname())
-port = 12345
-server_socket.bind((host,port))
-print("Server socket sucessfully Created on IP : {} at port {} ".format(host,port))
-server_socket.listen()
-print("Server is waiting for clients to connect .... \n\n")
-client_socket,client_addr = server_socket.accept()
-print("Client is connected")
-print("Client's IP {}:{}\n\n".format(*client_addr))
-f = open(input("Enter path to your file "),'rb')
-name =f.name
-client_socket.send(name.encode())
-for line in f:    
-    client_socket.send(line)
-else :
-    client_socket.send("EOF".encode()) 
-    client_socket.close()
-    server_socket.close()
+
+
+def server_program():
+    # get the hostname
+    host = socket.gethostname()
+    port = 5000  # initiate port no above 1024
+
+    server_socket = socket.socket()  # get instance
+    # look closely. The bind() function takes tuple as argument
+    server_socket.bind((host, port))  # bind host address and port together
+
+    # configure how many client the server can listen simultaneously
+    server_socket.listen(2)
+    conn, address = server_socket.accept()  # accept new connection
+    print("Connection from: " + str(address))
+    while True:
+        # receive data stream. it won't accept data packet greater than 1024 bytes
+        data = conn.recv(1024).decode()
+        if not data:
+            # if data is not received break
+            break
+        print("from connected user: " + str(data))
+        data = input(' -> ')
+        conn.send(data.encode())  # send data to the client
+
+    conn.close()  # close the connection
+
+
+if __name__ == '__main__':
+    server_program()
