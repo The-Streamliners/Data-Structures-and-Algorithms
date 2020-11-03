@@ -1,4 +1,4 @@
-# StreamLiners Hacktoberfest Repository [#1](https://github.com/Iltwats/)
+# StreamLiners DSA Repository [#1](https://github.com/Iltwats/)
 
 <img src="https://img.shields.io/github/contributors/Iltwats/hacktoberfest">  <img src="https://img.shields.io/tokei/lines/github/Iltwats/hacktoberfest"> <img src="https://img.shields.io/github/last-commit/Iltwats/hacktoberfest">   <img src="https://img.shields.io/github/languages/count/Iltwats/hacktoberfest"> <img src="https://img.shields.io/github/issues-raw/Iltwats/hacktoberfest"> <img align="center" src="https://visitor-badge.laobi.icu/badge?page_id=Iltwats.hacktoberfest.visitor-badge"> 
 
