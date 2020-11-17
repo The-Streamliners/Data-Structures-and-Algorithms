@@ -6,7 +6,7 @@
 - Clone the forked repository to your system.
 - Make the relevant changes according to the issue description and make sure you follow the directory structure mentioned there.
 - Commit and push the changes to your forked repository.
-- Make a Pull Request to the Hacktoberfest-2k20 repository. 
+- Make a Pull Request to this repository. 
 - Please stick to the Pull Request template provided.
 - Follow up on any changes requested and wait for it to be approved.
 
