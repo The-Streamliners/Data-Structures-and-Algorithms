@@ -5,7 +5,7 @@
 
 ## Introduction
 
-This repository contains all the **Implementations of famous and popular algorithm and their implementations** fork to make a reference for yourself and contrbute to increase the codebase.
+This repository contains all the **Implementations of famous and popular algorithm and their implementations** fork to make a reference for yourself and contribute to increase the repository's codebase.
 
 This DSA repository can also be used to contribute to Hacktoberfest which is a month-long celebration to encourage developers to use and contribute to open source projects.
 Continuing with the tradition to encourage first timers to contribute.
