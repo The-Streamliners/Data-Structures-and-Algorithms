@@ -5,22 +5,16 @@
 
 ## Introduction
 
-Hacktoberfest is a month-long celebration to encourage developers to use and contribute to open source projects.
-Continuing with the tradition, this year Hacktoberfest is happening from 1st to 31st October, 2020.
+This DSA repository can also be used to contribute to Hacktoberfest which is a month-long celebration to encourage developers to use and contribute to open source projects.
+Continuing with the tradition to encourage first timers to contribute.
 
-## Details
+## How can I Contribute?
 
-By contributing to open source, in terms of 4 pull requests, you get a limited edition Hacktoberfest T-shirt and stickers shipped to your address by Digital Ocean.
-
-## How can I participate?
-
-This repository is for you to practice contributing to open source projects and earn a Hacktoberfest T-shirt in the process. Write an implementation of your favorite algorithm from the issues section in the programming language of your choice and submit a pull request to this repository. For ideas, check out the [issues page](https://github.com/iltwats/hacktoberfest/issues)!
+This repository is for you to learn to contribute to open source projects. Write an implementation of your favorite algorithm from the issues section in the programming language of your choice and submit a pull request to this repository. For ideas, check out the [issues page](https://github.com/Iltwats/Data-Structures-and-Algorithms/issues)!
 
 Issues page is for your reference. You are to submit implementation of *your* choice of algorithm in any programming language if you think it is also **important** to be there..
 
-Simultaneously, register yourself on the [Hacktoberfest Website](https://hacktoberfest.digitalocean.com/). Click on the 'Start Hacking' button and fill in the required details. When you complete 4 pull requests, get ready for an awesome Hacktoberfest T-shirt for you to show-off!
-
-**Spamming with illogical PRs about upadting changing readme will not be considered. Please refer to *Contributing.md* for more info.**
+**Spamming with Illogical PRs about upadting, changing readme will not be considered. Please refer to [*Contributing.md*](https://github.com/Iltwats/Data-Structures-and-Algorithms/blob/main/CONTRIBUTING.md) for more info.**
 
 
 ## Steps to follow
@@ -41,11 +35,11 @@ This command initializes your directory for [git version control](https://www.di
 
 4. Clone the forked repository in the directory you just made
 ```bash
-git clone https://github.com/<your-github-username>/hacktoberfest.git
+git clone https://github.com/<your-github-username>/<repo_name>.git
 ```
 5. `cd` into the project repository and adding your implementation of your favorite algorithm in the programming language of your choice.
 ```bash
-cd hacktoberfest
+cd <repo_name>
 cd Sorting
 vim/subl/gedit/nano my-awesome-algorithm{.c/.cpp/.java/.py}
 ```
