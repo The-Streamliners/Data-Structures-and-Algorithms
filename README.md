@@ -1,5 +1,5 @@
 # Hacktoberfest DSA Repository
-### [Maintainer](https://github.com/Iltwats/)
+
 
 <img src="https://img.shields.io/github/contributors/Iltwats/hacktoberfest">  <img src="https://img.shields.io/tokei/lines/github/Iltwats/hacktoberfest"> <img src="https://img.shields.io/github/last-commit/Iltwats/hacktoberfest">   <img src="https://img.shields.io/github/languages/count/Iltwats/hacktoberfest"> <img src="https://img.shields.io/github/issues-raw/Iltwats/hacktoberfest"> <img src="https://visitor-badge.laobi.icu/badge?page_id=Iltwats.hacktoberfest.visitor-badge"> 
 
@@ -80,7 +80,7 @@ Although this should get you going, here are some awesome tutorials to help you 
 * [Atlassian's Git Tutorial](https://www.atlassian.com/git/tutorials)
 
 Happy Hacking!
-
+### Maintained by [Atul Sharma](https://github.com/Iltwats/)
   ![](https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif)
 
 
