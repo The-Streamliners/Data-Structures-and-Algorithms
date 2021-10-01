@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 /**
+ * @author Hrithik Sharma (coder481)
+ *
  * This is the java version of Subset-Sum-Problem
  *
  * Problem Statement
