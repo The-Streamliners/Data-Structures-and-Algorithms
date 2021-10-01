@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// File opening logic
 int main()
 {
    char ch, file_name[25];
