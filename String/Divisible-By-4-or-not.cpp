@@ -11,11 +11,11 @@ int main() {
   int a;
 
   if(s.length()>=2){
-    a=(s[s.length()-2]-'0')*10+(s[s.length()-1]-'0'); // last two digits
+    a=(s[s.length()-2]-'0')*10+(s[s.length()-1]-'0');
   }else{
     a=s[0]-'0'; // single integer
   }
-
+  
   if(a%4==0){
     cout<<"YES"<<endl;
   }else{
