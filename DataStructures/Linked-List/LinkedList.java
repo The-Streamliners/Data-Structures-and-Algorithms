@@ -1,93 +1,223 @@
-import  java.lang.*;
+package Algorithms.LinkedList;
 
-public class List {
-
-    class Node {
-
-        int key;
-        Node next;
-
-        public Node (int key){
-            this.key = key;
-        }
-
-        public void print() {
-            System.out.println ("Key: " + key);
-            System.out.println ("Next: " + next);
-        }
-    }
-
+import java.util.*;
+class LinkedList {
     Node head;
 
-    public List (Node head){
-        this.head = head;
-    }
+    // Create a node
+    class Node {
+        int item;
+        Node next;
 
-    public boolean isEmpty(){
-        return head.next == null;
-    }
-
-    public boolean exists (int key) {
-        Node current = head;
-        while (current != null){
-            if (current.key == key) return true;
-            current = current.next;
+        Node(int d) {
+            item = d;
+            next = null;
         }
-        return false;
     }
 
-    public void insertAtHead (Node toInsert){
-        toInsert.next = head.next;
-        head.next = toInsert;
+    public void insertAtBeginning(int data) {
+        // insert the item
+        Node new_node = new Node(data);
+        new_node.next = head;
+        head = new_node;
     }
 
-    public void insertAtTail (Node toInsert){
-        Node current = head;
-        while (current.next != null){
-            current = current.next;
+    public void insertAfter(Node prev_node, int data) {
+        if (prev_node == null) {
+            System.out.println("The given previous node cannot be null");
+            return;
         }
-        current.next = toInsert;
-        toInsert.next = null;
+        Node new_node = new Node(data);
+        new_node.next = prev_node.next;
+        prev_node.next = new_node;
     }
 
-    public void insertAfterKey (int key, Node toInsert){
-        Node current = head;
-        if (!exists(key)) System.out.println ("Key not found.");
-        else {
-            while (current.key != key){
-                current = current.next;
+    public void insertAtEnd(int data) {
+        Node new_node = new Node(data);
+
+        if (head == null) {
+            head = new Node(data);
+            return;
+        }
+
+        new_node.next = null;
+
+        Node last = head;
+        while (last.next != null)
+            last = last.next;
+
+        last.next = new_node;
+        return;
+    }
+
+    void deleteNode(int position) {
+        if (head == null)
+            return;
+
+        Node node = head;
+
+        if (position == 0) {
+            head = node.next;
+            return;
+        }
+        // Find the key to be deleted
+        for (int i = 0; node != null && i < position - 1; i++)
+            node = node.next;
+
+        // If the key is not present
+        if (node == null || node.next == null)
+            return;
+
+        // Remove the node
+        Node next = node.next.next;
+
+        node.next = next;
+    }
+
+    public void printList(Node node) {
+        //Node node = head;
+        while (node != null) {
+            System.out.print(node.item + " ");
+            node = node.next;
+        }
+    }
+    Node reverse(Node node)
+    {
+        Node prev=null;
+        Node curr=head;
+        Node next=null;
+        while(curr!=null)
+        {
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        node=prev;
+        return node;
+    }
+    public static  int search(int number,Node head)
+    {
+
+        if(head==null)
+        {
+            return -1;
+        }
+        Node temp=head;
+        int index=0;//it will help us to return the index of the position if found
+        while(temp!=null)
+        {
+            if(temp.item==number)
+            {
+                return index;
             }
-            toInsert.next = current.next;
-            current.next = toInsert;
+            index++;
+            temp=temp.next;
         }
+        return -1;
+
+    }
+    public static Node getmiddle(Node head)
+    {
+        if(head==null)
+        {
+            return head;
+        }
+        Node slow=head;
+        Node fast=head.next;
+        while(fast!=null&&fast.next!=null)
+        {
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
+    }
+    Node merge(Node node)
+    {
+        if(node==null||node.next==null)
+        {
+            return node;
+        }
+        Node middle=getmiddle(node);
+        Node middlenext=middle.next;
+        middle.next=null;
+        Node firstpart=merge(node);
+        Node secondpart=merge(middlenext);
+        return mergesort(firstpart,secondpart);
+    }
+    Node mergesort(Node a,Node b)
+    {
+        if(a==null)
+        {
+            return b;
+        }
+        if(b==null)
+        {
+            return a;
+        }
+        Node result=null;
+        if(a.item<=b.item)
+        {
+            result=a;
+            result.next=mergesort(a.next,b);
+        }
+        else
+        {
+            result=b;
+            result.next=mergesort(a,b.next);
+        }
+        return result;
     }
 
-    public Node getElement(int pos){
-        Node current = head;
-        for (int i = 1; i <= pos; i++){
-            current = current.next;
-        }
-        return current;
-    }
 
-    public int countElements (){
-        Node current = head;
-        int counter = 0;
-        while (current != null){
-            counter++;
-            current = current.next;
-        }
-        return counter;
-    }
 
-    public void printList (){
-        Node current = head;
-        while (current != null){
-            System.out.println ("Key:  " + current.key);
-            if (current.next == null) System.out.println ("Last Node.");
-            else System.out.println ("Next: " + current.next.key);
-            current = current.next;
+    public static void main(String[] args) {
+        LinkedList llist = new LinkedList();
+
+        llist.insertAtEnd(1);
+        llist.insertAtBeginning(2);
+        llist.insertAtBeginning(3);
+        llist.insertAtEnd(4);
+        llist.insertAfter(llist.head.next, 5);
+
+        System.out.println("Linked list: ");
+        llist.printList(llist.head);
+
+        System.out.println("\nAfter deleting an element: ");
+        llist.deleteNode(3);
+        llist.printList(llist.head);
+        llist.head=llist.reverse(llist.head);
+        System.out.println("\n After reversing the element are");
+        llist.printList(llist.head);
+        System.out.println("\n enter the element you want to search in linked list");
+        int element;
+        Scanner sc=new Scanner(System.in);
+        element=sc.nextInt();
+        int ans=  search(element, llist.head);
+        if(ans==-1)
+        {
+            System.out.println("\n element not found");
         }
-        System.out.print (countElements() + " Elements in this List.");
+        else
+        {
+            System.out.println("\n element found at position" +ans);
+        }
+        llist.head= llist.merge(llist.head);
+        System.out.println("\n Sorted linked list:");
+        llist.printList(llist.head);
+
     }
 }
+/*output of the following code given above which has certain operation of linked list
+Linked list:
+3 2 5 1 4
+After deleting an element:
+3 2 5 4
+ After reversing the element are
+4 5 2 3
+ enter the element you want to search in linked list
+2
+ element found at position2
+ Sorted linked list:
+2 3 4 5
+ */
